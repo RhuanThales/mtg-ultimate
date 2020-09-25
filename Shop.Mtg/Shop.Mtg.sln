@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.Mtg.Web", "Shop.Mtg.Web\Shop.Mtg.Web.csproj", "{19FA31F5-57D0-4F8B-9418-7AA3EF4202CD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dominio", "Dominio", "{ACC8C36A-0459-4164-BF0D-97F1E40E401C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.Mtg.Dominio", "Shop.Mtg.Dominio\Shop.Mtg.Dominio.csproj", "{DAE3F4EB-866A-40AE-9864-4E5A984EA1EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dados", "Dados", "{2009947D-E0FF-4CFF-BE77-C345265A0B37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.Mtg.Dados.Entity", "Shop.Mtg.Dados.Entity\Shop.Mtg.Dados.Entity.csproj", "{01F8FC24-9057-404C-85C6-EC9FA9AB7DDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.Mtg.Generica.Entity", "Shop.Mtg.Generica.Entity\Shop.Mtg.Generica.Entity.csproj", "{C1B9AA8C-D8D1-4381-A6A4-E4446C34213B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19FA31F5-57D0-4F8B-9418-7AA3EF4202CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19FA31F5-57D0-4F8B-9418-7AA3EF4202CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19FA31F5-57D0-4F8B-9418-7AA3EF4202CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19FA31F5-57D0-4F8B-9418-7AA3EF4202CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAE3F4EB-866A-40AE-9864-4E5A984EA1EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAE3F4EB-866A-40AE-9864-4E5A984EA1EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAE3F4EB-866A-40AE-9864-4E5A984EA1EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAE3F4EB-866A-40AE-9864-4E5A984EA1EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01F8FC24-9057-404C-85C6-EC9FA9AB7DDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01F8FC24-9057-404C-85C6-EC9FA9AB7DDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01F8FC24-9057-404C-85C6-EC9FA9AB7DDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01F8FC24-9057-404C-85C6-EC9FA9AB7DDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1B9AA8C-D8D1-4381-A6A4-E4446C34213B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1B9AA8C-D8D1-4381-A6A4-E4446C34213B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1B9AA8C-D8D1-4381-A6A4-E4446C34213B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1B9AA8C-D8D1-4381-A6A4-E4446C34213B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DAE3F4EB-866A-40AE-9864-4E5A984EA1EA} = {ACC8C36A-0459-4164-BF0D-97F1E40E401C}
+		{01F8FC24-9057-404C-85C6-EC9FA9AB7DDF} = {2009947D-E0FF-4CFF-BE77-C345265A0B37}
+		{C1B9AA8C-D8D1-4381-A6A4-E4446C34213B} = {2009947D-E0FF-4CFF-BE77-C345265A0B37}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5DB4A33A-ADFC-4B69-A1E9-AEF663C12BAB}
+	EndGlobalSection
+EndGlobal
