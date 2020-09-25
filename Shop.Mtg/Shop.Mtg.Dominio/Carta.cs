@@ -14,6 +14,8 @@ namespace Shop.Mtg.Dominio
 
         public string CustoMana { get; set; }
 
+        public int CustoManaConvertido { get; set; }
+
         public string Tipo { get; set; }
 
         public bool Lendaria { get; set; }
@@ -22,10 +24,14 @@ namespace Shop.Mtg.Dominio
 
         public string SubTipoB { get; set; }
 
+        public string Raridade { get; set; }
+
         public string Descricao { get; set; }
 
         public int Poder { get; set; }
 
         public int Resistencia { get; set; }
+
+        public string Edicao { get; set; }
     }
 }

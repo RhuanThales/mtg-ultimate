@@ -1,0 +1,105 @@
+﻿@model Shop.Mtg.Dominio.Carta
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Carta</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustoMana)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustoMana)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lendaria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lendaria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SubTipoA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubTipoA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SubTipoB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubTipoB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Raridade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Raridade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Poder)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Poder)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Resistencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Resistencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Edicao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Edicao)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
