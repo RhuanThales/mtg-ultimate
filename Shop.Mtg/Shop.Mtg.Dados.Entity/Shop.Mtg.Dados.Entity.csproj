@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Context\MtgDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TypeConfiguration\CartaTypeConfiguration.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -62,6 +63,10 @@
     <ProjectReference Include="..\Shop.Mtg.Dominio\Shop.Mtg.Dominio.csproj">
       <Project>{dae3f4eb-866a-40ae-9864-4e5a984ea1ea}</Project>
       <Name>Shop.Mtg.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shop.Mtg.Generica.Entity\Shop.Mtg.Generica.Entity.csproj">
+      <Project>{c1b9aa8c-d8d1-4381-a6a4-e4446c34213b}</Project>
+      <Name>Shop.Mtg.Generica.Entity</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
