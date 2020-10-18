@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Shop.Mtg.Dominio.Carta>
+﻿@model IEnumerable<Shop.Mtg.Web.ViewModels.Carta.CartaIndexViewModel>
 
 @{
     ViewBag.Title = "Index";
@@ -31,6 +31,9 @@
             @Html.DisplayNameFor(model => model.SubTipoB)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.Raridade)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Descricao)
         </th>
         <th>
@@ -38,6 +41,9 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Resistencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Edicao)
         </th>
         <th></th>
     </tr>
@@ -64,6 +70,18 @@
                 @Html.DisplayFor(modelItem => item.SubTipoB)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.SubTipoB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubTipoB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubTipoB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Raridade)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Descricao)
             </td>
             <td>
@@ -71,6 +89,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Resistencia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Edicao)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |

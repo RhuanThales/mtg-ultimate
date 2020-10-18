@@ -6,8 +6,10 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using AutoMapper;
 using Shop.Mtg.Dados.Entity.Context;
 using Shop.Mtg.Dominio;
+using Shop.Mtg.Web.ViewModels.Carta;
 
 namespace Shop.Mtg.Web.Controllers
 {
@@ -18,7 +20,7 @@ namespace Shop.Mtg.Web.Controllers
         // GET: Cartas
         public ActionResult Index()
         {
-            return View(db.Cartas.ToList());
+            return View(Mapper.Map<List<Carta>, List<CartaIndexViewModel>> (db.Cartas.ToList()));
         }
 
         // GET: Cartas/Details/5
@@ -47,19 +49,19 @@ namespace Shop.Mtg.Web.Controllers
 
         // POST: Cartas/Create
         // Para proteger-se contra ataques de excesso de postagem, ative as propriedades específicas às quais deseja se associar. 
-        // Para obter mais detalhes, confira https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Carta carta)
+        public ActionResult Create([Bind(Include = "Id, Nome, CustoMana, CustoManaConvertido, Tipo, Lendaria, SubTipoA, SubTipoB, Raridade, Descricao, Poder, Resistencia, Edicao")] CartaViewModel viewModel)
         {
             if (ModelState.IsValid)
             {
+                Carta carta = Mapper.Map<CartaViewModel, Carta>(viewModel);
                 db.Cartas.Add(carta);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(carta);
+            return View(viewModel);
         }
 
         // GET: Cartas/Edit/5
@@ -77,24 +79,24 @@ namespace Shop.Mtg.Web.Controllers
                 return HttpNotFound();
             }
             
-            return View(carta);
+            return View(Mapper.Map<Carta, CartaViewModel>(carta));
         }
 
         // POST: Cartas/Edit/5
         // Para proteger-se contra ataques de excesso de postagem, ative as propriedades específicas às quais deseja se associar. 
-        // Para obter mais detalhes, confira https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Carta carta)
+        public ActionResult Edit([Bind(Include = "Id, Nome, CustoMana, CustoManaConvertido, Tipo, Lendaria, SubTipoA, SubTipoB, Raridade, Descricao, Poder, Resistencia, Edicao")] CartaViewModel viewModel)
         {
             if (ModelState.IsValid)
             {
+                Carta carta = Mapper.Map<CartaViewModel, Carta>(viewModel);
                 db.Entry(carta).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
             
-            return View(carta);
+            return View(viewModel);
         }
 
         // GET: Cartas/Delete/5
