@@ -38,7 +38,7 @@ namespace Shop.Mtg.Web.Controllers
                 return HttpNotFound();
             }
             
-            return View(carta);
+            return View(Mapper.Map<Carta, CartaIndexViewModel>(carta));
         }
 
         // GET: Cartas/Create
@@ -114,7 +114,7 @@ namespace Shop.Mtg.Web.Controllers
                 return HttpNotFound();
             }
             
-            return View(carta);
+            return View(Mapper.Map<Carta, CartaIndexViewModel>(carta));
         }
 
         // POST: Cartas/Delete/5

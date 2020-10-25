@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Shop.Mtg.Web.Annotations;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -35,7 +36,7 @@ namespace Shop.Mtg.Web.ViewModels.Carta
         public bool Lendaria { get; set; }
 
         [Required(ErrorMessage = "O campo raça é Obrigatório")]
-        [MaxLength(50, ErrorMessage = "A raça ter no máximo 50 caracteres")]
+        [MaxLength(50, ErrorMessage = "A raça deve ter no máximo 50 caracteres")]
         [Display(Name = "Raça")]
         public string SubTipoA { get; set; }
 
@@ -63,6 +64,7 @@ namespace Shop.Mtg.Web.ViewModels.Carta
 
         [MaxLength(100, ErrorMessage = "A edição deve ter no máximo 100 caracteres")]
         [Display(Name = "Edição da Carta")]
+        [Edicao(ErrorMessage = "A edição deve começar com a sigla 'MTG'")]
         public string Edicao { get; set; }
     }
 }

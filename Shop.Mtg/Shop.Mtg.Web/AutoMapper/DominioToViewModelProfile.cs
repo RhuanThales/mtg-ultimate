@@ -12,7 +12,12 @@ namespace Shop.Mtg.Web.AutoMapper
     {
         protected override void Configure()
         {
-            Mapper.CreateMap<Carta, CartaIndexViewModel>();
+            Mapper.CreateMap<Carta, CartaIndexViewModel>()
+                .ForMember(c => c.Nome, opt => {
+                    opt.MapFrom(src => 
+                        string.Format("{0} ({1})", src.Nome, src.Edicao)
+                    );
+                });
             Mapper.CreateMap<Carta, CartaViewModel>();
         }
     }
