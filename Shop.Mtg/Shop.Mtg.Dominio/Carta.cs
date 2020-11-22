@@ -20,6 +20,7 @@ namespace Shop.Mtg.Dominio
         public string Descricao { get; set; }
         public int Poder { get; set; }
         public int Resistencia { get; set; }
-        public string Edicao { get; set; }
+        public int IdEdicao { get; set; }
+        public virtual Edicao Edicao { get; set; }
     }
 }

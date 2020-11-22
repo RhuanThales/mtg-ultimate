@@ -44,6 +44,9 @@ namespace Shop.Mtg.Web.ViewModels.Carta
         public int Resistencia { get; set; }
 
         [Display(Name = "Edição da Carta")]
-        public string Edicao { get; set; }
+        public string IdEdicao { get; set; }
+
+        [Display(Name = "Edição")]
+        public string EdicaoNome { get; set; }
     }
 }

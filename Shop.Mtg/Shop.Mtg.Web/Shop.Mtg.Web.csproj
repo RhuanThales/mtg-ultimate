@@ -55,6 +55,12 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.3\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -135,14 +141,20 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="AutoMapper\DominioToViewModelProfile.cs" />
     <Compile Include="AutoMapper\ViewModelToDominioProfile.cs" />
+    <Compile Include="Controllers\UsuariosController.cs" />
+    <Compile Include="Controllers\EdicoesController.cs" />
     <Compile Include="Controllers\CartasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Identity\MtgIdentityDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\Carta\CartaIndexViewModel.cs" />
     <Compile Include="ViewModels\Carta\CartaViewModel.cs" />
+    <Compile Include="ViewModels\Edicao\EdicaoIndexViewModel.cs" />
+    <Compile Include="ViewModels\Edicao\EdicaoViewModel.cs" />
+    <Compile Include="ViewModels\Usuarios\UsuarioViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -185,6 +197,13 @@
     <Content Include="Views\Cartas\Details.cshtml" />
     <Content Include="Views\Cartas\Delete.cshtml" />
     <Content Include="Views\Cartas\Create.cshtml" />
+    <Content Include="Views\Edicoes\Create.cshtml" />
+    <Content Include="Views\Edicoes\Delete.cshtml" />
+    <Content Include="Views\Edicoes\Details.cshtml" />
+    <Content Include="Views\Edicoes\Edit.cshtml" />
+    <Content Include="Views\Edicoes\Index.cshtml" />
+    <Content Include="Views\Usuarios\CriarUsuario.cshtml" />
+    <Content Include="Views\Usuarios\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -211,6 +230,18 @@
     <ProjectReference Include="..\Shop.Mtg.Dominio\Shop.Mtg.Dominio.csproj">
       <Project>{dae3f4eb-866a-40ae-9864-4e5a984ea1ea}</Project>
       <Name>Shop.Mtg.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shop.Mtg.Repositorios.Comum.Entity\Shop.Mtg.Repositorios.Comum.Entity.csproj">
+      <Project>{16A2CF2B-841A-4130-8829-CB5CC6FBAE79}</Project>
+      <Name>Shop.Mtg.Repositorios.Comum.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shop.Mtg.Repositorios.Comum\Shop.Mtg.Repositorios.Comum.csproj">
+      <Project>{F04141B0-AC4F-4150-A314-42B01EF1697D}</Project>
+      <Name>Shop.Mtg.Repositorios.Comum</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shop.Mtg.Repositorios.Entity\Shop.Mtg.Repositorios.Entity.csproj">
+      <Project>{A56862CB-2C1D-4F28-A442-5453D5B1AAD3}</Project>
+      <Name>Shop.Mtg.Repositorios.Entity</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

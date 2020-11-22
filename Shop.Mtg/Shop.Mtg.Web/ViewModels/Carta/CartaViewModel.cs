@@ -62,9 +62,8 @@ namespace Shop.Mtg.Web.ViewModels.Carta
         [Display(Name = "Resistência da Carta")]
         public int Resistencia { get; set; }
 
-        [MaxLength(100, ErrorMessage = "A edição deve ter no máximo 100 caracteres")]
+        [Required(ErrorMessage = "O campo edição é Obrigatório")]
         [Display(Name = "Edição da Carta")]
-        [Edicao(ErrorMessage = "A edição deve começar com a sigla 'MTG'")]
-        public string Edicao { get; set; }
+        public string IdEdicao { get; set; }
     }
 }

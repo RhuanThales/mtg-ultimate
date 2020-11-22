@@ -1,0 +1,89 @@
+﻿@model IEnumerable<Shop.Mtg.Web.ViewModels.Edicao.EdicaoIndexViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<div class="row">
+    <div class="col-md-10">
+        <input type="text" id="pesquisaEdicao" class="form-control" />
+    </div>
+    <div class="col-md-2">
+        <button id="btnPesquisarEdicao">Pesquisar</button>
+    </div>
+</div>
+
+<table class="table" id="tblEdicoes">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sigla)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ano)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sigla)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ano)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+</table>
+
+@section Scripts{
+<script>
+    $(document).ready(function(){
+        $("#btnPesquisarEdicao").click(function () {
+            var termoPesquisa = $("#pesquisaEdicao").val();
+            $.ajax({
+                method: "GET",
+                url: "/Edicoes/FiltrarPorNome/" + termoPesquisa,
+                success: function (data) {
+                    $("#tblEdicoes tbody > tr").remove();
+                    $.each(data, function (i, edicao) {
+                        $("#tblEdicoes tbody").append(
+                            "<tr>" +
+                            "<td>" + edicao.Nome + "</td>" +
+                            "<td>" + edicao.Sigla + "</td>" +
+                            "<td>" + edicao.Ano + "</td>" +
+                            "<td>" +
+                            "<a href='/Edicoes/Edit" + edicao.Id + "'>Edit</a>" +
+                            "<a href='/Edicoes/Details" + edicao.Id + "'>Details</a>" +
+                            "<a href='/Edicoes/Delete" + edicao.Id + "'>Delete</a>" +
+                            "</td>" +
+                            "</tr>"
+                        );
+                    });
+                },
+                error: function (data) {
+                    alert("Houve um erro na Pesquisa");
+                }
+            });
+        });
+    });
+</script>
+}

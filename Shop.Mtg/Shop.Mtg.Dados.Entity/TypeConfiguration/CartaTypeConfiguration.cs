@@ -78,15 +78,16 @@ namespace Shop.Mtg.Dados.Entity.TypeConfiguration
                 .IsRequired()
                 .HasColumnName("Resistencia");
 
-            Property(p => p.Edicao)
-                .IsOptional()
-                .HasMaxLength(100)
-                .HasColumnName("Edicao");
+            Property(p => p.IdEdicao)
+               .IsRequired()
+               .HasColumnName("IdEdicao");
         }
 
         protected override void configurarChaveEstrangeira()
         {
-            // Implementar quando houver chaves estrangeiras
+            HasRequired(p => p.Edicao)
+                .WithMany(p => p.Cartas)
+                .HasForeignKey(fk => fk.IdEdicao);
         }
     }
 }

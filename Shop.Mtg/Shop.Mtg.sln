@@ -15,6 +15,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.Mtg.Dados.Entity", "Sh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.Mtg.Generica.Entity", "Shop.Mtg.Generica.Entity\Shop.Mtg.Generica.Entity.csproj", "{C1B9AA8C-D8D1-4381-A6A4-E4446C34213B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repositorios", "Repositorios", "{4170DBAF-A5C6-4A3B-8DA8-EFF8E510F4F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.Mtg.Repositorios.Comum", "Shop.Mtg.Repositorios.Comum\Shop.Mtg.Repositorios.Comum.csproj", "{F04141B0-AC4F-4150-A314-42B01EF1697D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.Mtg.Repositorios.Entity", "Shop.Mtg.Repositorios.Entity\Shop.Mtg.Repositorios.Entity.csproj", "{A56862CB-2C1D-4F28-A442-5453D5B1AAD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.Mtg.Repositorios.Comum.Entity", "Shop.Mtg.Repositorios.Comum.Entity\Shop.Mtg.Repositorios.Comum.Entity.csproj", "{16A2CF2B-841A-4130-8829-CB5CC6FBAE79}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +45,18 @@ Global
 		{C1B9AA8C-D8D1-4381-A6A4-E4446C34213B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1B9AA8C-D8D1-4381-A6A4-E4446C34213B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1B9AA8C-D8D1-4381-A6A4-E4446C34213B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F04141B0-AC4F-4150-A314-42B01EF1697D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F04141B0-AC4F-4150-A314-42B01EF1697D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F04141B0-AC4F-4150-A314-42B01EF1697D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F04141B0-AC4F-4150-A314-42B01EF1697D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A56862CB-2C1D-4F28-A442-5453D5B1AAD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A56862CB-2C1D-4F28-A442-5453D5B1AAD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A56862CB-2C1D-4F28-A442-5453D5B1AAD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A56862CB-2C1D-4F28-A442-5453D5B1AAD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16A2CF2B-841A-4130-8829-CB5CC6FBAE79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16A2CF2B-841A-4130-8829-CB5CC6FBAE79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16A2CF2B-841A-4130-8829-CB5CC6FBAE79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16A2CF2B-841A-4130-8829-CB5CC6FBAE79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,6 +65,9 @@ Global
 		{DAE3F4EB-866A-40AE-9864-4E5A984EA1EA} = {ACC8C36A-0459-4164-BF0D-97F1E40E401C}
 		{01F8FC24-9057-404C-85C6-EC9FA9AB7DDF} = {2009947D-E0FF-4CFF-BE77-C345265A0B37}
 		{C1B9AA8C-D8D1-4381-A6A4-E4446C34213B} = {2009947D-E0FF-4CFF-BE77-C345265A0B37}
+		{F04141B0-AC4F-4150-A314-42B01EF1697D} = {4170DBAF-A5C6-4A3B-8DA8-EFF8E510F4F9}
+		{A56862CB-2C1D-4F28-A442-5453D5B1AAD3} = {4170DBAF-A5C6-4A3B-8DA8-EFF8E510F4F9}
+		{16A2CF2B-841A-4130-8829-CB5CC6FBAE79} = {4170DBAF-A5C6-4A3B-8DA8-EFF8E510F4F9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5DB4A33A-ADFC-4B69-A1E9-AEF663C12BAB}

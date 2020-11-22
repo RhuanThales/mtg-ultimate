@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Shop.Mtg.Dominio;
 using Shop.Mtg.Web.ViewModels.Carta;
+using Shop.Mtg.Web.ViewModels.Edicao;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace Shop.Mtg.Web.AutoMapper
         protected override void Configure()
         {
             Mapper.CreateMap<CartaViewModel, Carta>();
+            Mapper.CreateMap<EdicaoViewModel, Edicao>();
         }
     }
 }

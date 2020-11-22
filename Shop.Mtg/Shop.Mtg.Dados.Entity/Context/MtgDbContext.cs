@@ -12,11 +12,12 @@ namespace Shop.Mtg.Dados.Entity.Context
     public class MtgDbContext : DbContext
     {
         public DbSet<Carta> Cartas { get; set; }
+        public DbSet<Edicao> Edicoes { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new CartaTypeConfiguration());
-            // base.OnModelCreating(modelBuilder);
+            modelBuilder.Configurations.Add(new EdicaoTypeConfiguration());
         }
     }
 }
