@@ -16,6 +16,7 @@ using Shop.Mtg.Web.ViewModels.Edicao;
 
 namespace Shop.Mtg.Web.Controllers
 {
+    [Authorize]
     public class CartasController : Controller
     {
         private IRepositorioGenerico<Carta, long>

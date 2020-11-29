@@ -11,11 +11,13 @@ using Shop.Mtg.Dados.Entity.Context;
 using Shop.Mtg.Dominio;
 using Shop.Mtg.Repositorios.Comum;
 using Shop.Mtg.Repositorios.Entity;
+using Shop.Mtg.Web.Filtros;
 using Shop.Mtg.Web.ViewModels.Carta;
 using Shop.Mtg.Web.ViewModels.Edicao;
 
 namespace Shop.Mtg.Web.Controllers
 {
+    [Authorize]
     [LogActionFilter]
     public class EdicoesController : Controller
     {
